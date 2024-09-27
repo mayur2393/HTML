@@ -1,0 +1,175 @@
+            1. Generate a random array of 50 integers and display using line chart, scatter plot,
+               histogram, and box plot:
+         
+	  import numpy as np
+          import matplotlib.pyplot as plt
+          data = np.random.randint(1, 100, 50)
+          plt.figure(figsize=(10, 6))
+          plt.subplot(2, 2, 1)
+          plt.plot(data, label="Line Chart")
+          plt.legend()
+          plt.subplot(2, 2, 2)
+          plt.scatter(range(len(data)), data, label="Scatter Plot")
+          plt.legend()
+          plt.subplot(2, 2, 3)
+          plt.hist(data, bins=10, label="Histogram")
+          plt.legend()
+          plt.subplot(2, 2, 4)
+          plt.boxplot(data, labels=["Box Plot"])
+          plt.tight_layout()
+          plt.show()
+
+_________________________________________________________________________________________________________________________________________________________
+        1. Create a Bar plot to get the frequency of the three species of the Iris data:
+
+          import pandas as pd
+          import matplotlib.pyplot as plt
+          df = pd.read_csv('iris.csv')
+          species_count = df['species'].value_counts()
+          species_count.plot(kind='bar', color='skyblue')
+          plt.title("Species Frequency")
+          plt.xlabel("Species")
+          plt.ylabel("Count")
+          plt.show()
+
+___________________________________________________________________________________________________________________________________________________________
+         1. View basic statistical details of data (like winequality-red.csv):
+
+
+          import pandas as pd
+          df = pd.read_csv('data.csv')
+          df.fillna(df.mean(), inplace=True)
+          print(df)
+______________________________________________________________________________________________________________________________________________
+           1. Handling missing values (replace missing values with the mean):
+
+          import matplotlib.pyplot as plt
+          subjects = ['Math', 'Physics', 'Chemistry']
+          marks = [90, 85, 80]
+          plt.pie(marks, labels=subjects, autopct='%1.1f%%')
+          plt.title('Subject Marks Pie Chart')
+          plt.show()
+          plt.bar(subjects, marks, color='orange')
+          plt.title('Subject Marks Bar Chart')
+          plt.show()
+__________________________________________________________________________________________________________________________________
+           1. Create box plots to see feature distribution (Iris dataset - Sepal Length, Sepal Width,
+              Petal Length, Petal Width):
+
+          import pandas as pd
+          df = pd.read_csv('data.csv')
+          print(df.shape)
+          print("First 10 rows:\n", df.head(10))
+          print("Last 10 rows:\n", df.tail(10))
+          print("Random 10 rows:\n", df.sample(10))
+___________________________________________________________________________________________________________________________
+         1. Import dataset and print first/last/random rows, display shape:
+
+          import pandas as pd
+          df = pd.read_csv('data.csv')
+          print("Shape:", df.shape)
+          print("Data Types:\n", df.dtypes)
+          print("Feature Names:", df.columns.tolist())
+          print("Description:\n", df.describe())
+_________________________________________________________________________________________________________________________
+           1. Print the shape, number of rows-columns, data types, feature names, and description of
+              the data:
+
+          import pandas as pd
+          from sklearn.preprocessing import OneHotEncoder, LabelEncoder
+          df = pd.read_csv('data.csv')
+          # OneHot Encoding
+          onehot = pd.get_dummies(df['Country'])
+          # Label Encoding
+          label = LabelEncoder()
+          df['Purchased'] = label.fit_transform(df['Purchased'])
+          print(onehot)
+          print(df['Purchased'])
+_____________________________________________________________________________________________________________
+           1. OneHot coding and Label encoding on categorical columns (data.csv):
+
+In [ ]:
+          import pandas as pd
+          from sklearn.preprocessing import MinMaxScaler, StandardScaler, Norma
+          df = pd.read_csv('winequality-red.csv')
+          # MinMaxScaler
+          scaler = MinMaxScaler()
+          df_scaled = scaler.fit_transform(df)
+          # StandardScaler
+          standard = StandardScaler()
+          df_standard = standard.fit_transform(df)
+          # Normalizer
+          normalizer = Normalizer()
+          df_normalized = normalizer.fit_transform(df)
+          print(df_scaled, df_standard, df_normalized)
+__________________________________________________________________________________________________________
+           1. Graph for relationship between petal length and petal width (Iris dataset):
+
+In [ ]:
+          import pandas as pd
+          from sklearn.preprocessing import MinMaxScaler, StandardScaler, Norma
+          df = pd.read_csv('winequality-red.csv')
+          # MinMaxScaler
+          scaler = MinMaxScaler()
+          df_scaled = scaler.fit_transform(df)
+          # StandardScaler
+          standard = StandardScaler()
+          df_standard = standard.fit_transform(df)
+          # Normalizer
+          normalizer = Normalizer()
+          df_normalized = normalizer.fit_transform(df)
+          print(df_scaled, df_standard, df_normalized)
+_________________________________________________________________________________________________________
+         1. Rescaling/Normalizing/Standardizing data using MinMaxScaler, Normalizer:
+
+In [ ]:
+          import numpy as np
+          from scipy.spatial import distance
+
+
+          points = np.random.randint(1, 100, (10, 2))
+          total_distance = np.sum([distance.cityblock(p1, p2) for i, p1 in enum
+
+          print("Total Manhattan Distance:", total_distance)
+_________________________________________________________________________________________________
+            1. Sum of Manhattan distance between all pairs of points:
+
+In [1]:
+          import numpy as np
+          array = np.random.randint(1, 100, 10)
+          weights = np.ones_like(array) / len(array)
+          weighted_avg = np.average(array, weights=weights)
+          print("Weighted Average:", weighted_avg
+          Weighted Average: 52.300000000000004
+____________________________________________________________________________________________________________
+           1. Compute weighted average along a specified axis of a flattened array (NumPy):
+
+In [ ]:
+          import pandas as pd
+          df = pd.read_csv('SOCR-HeightWeight.csv')
+          print("Column-wise Mean:\n", df.mean())
+          print("Column-wise Median:\n", df.median())
+___________________________________________________________________________________________________
+           1. Compute sum of column-wise mean and median (SOCR-HeightWeight dataset):
+
+In [ ]:
+          import numpy as np
+          from sklearn.preprocessing import Binarizer
+          data = np.random.rand(10, 2) * 10
+          binarizer = Binarizer(threshold=5)
+          binarized_data = binarizer.fit_transform(data)
+          print("Original Data:\n", data)
+          print("Binarized Data:\n", binarized_data)
+______________________________________________________________________________________________________
+
+         1. Binarize data using threshold (Binarizer class):
+
+In [ ]:
+          import numpy as np
+          from sklearn.preprocessing import Binarizer
+          data = np.random.rand(10, 2) * 10
+          binarizer = Binarizer(threshold=5)
+          binarized_data = binarizer.fit_transform(data)
+          print("Original Data:\n", data)
+          print("Binarized Data:\n", binarized_data)
+
