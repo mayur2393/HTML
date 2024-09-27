@@ -18,10 +18,7 @@ Enter Two Numbers<br>
 <input type="text" name="n2"><br><br>
 Select An Operation<br>
 <input type="radio" name="op" value="mod">Mod Of The Two Numbers<br><br>
-
-MOBILE: 9730381255 | WWW.NRCLASSESPUNE.COM | WWW.BCSBCA.COM
-
-<input type="radio" name="op" value="power">Power Of The First Number Raised
+<input type="radio" name="op" value="power">Power Of The First Number Raised
 To The Second<br><br>
 <input type="radio" name="op" value="sum">The Sum Of First n Numbers<br><br>
 <input type="radio" name="op" value="fact">Factorial Of The Second
@@ -86,6 +83,7 @@ echo"Factorial of $n2 is $result.";
 break;
 }
 ?>
+=================================================================================================================
 Slip11: Create a button with different style (Secondary, Primary, Success, Error, Info,
 Warning, Danger) using BootStrap.
 <html>
@@ -155,10 +153,9 @@ PHP FILE
 <?php
 include'slip12.php';
 ?>
+=========================================================================================================================
 
-MOBILE: 9730381255 | WWW.NRCLASSESPUNE.COM | WWW.BCSBCA.COM
-
-Slip13: Write a PHP script to create a chess board using CSS on table cells.
+Slip13: Write a PHP script to create a chess board using CSS on table cells.
 <html>
 <head>
 <head><title>NRC ChessBoard</title>
@@ -201,15 +198,13 @@ echo"<td class=clr1></td>";
 else
 echo"<td class=clr2></td>";
 }
-
-MOBILE: 9730381255 | WWW.NRCLASSESPUNE.COM | WWW.BCSBCA.COM
-
-}
+}
 echo "</tr>";
 }
 echo"</table>" ;
 ?>
 </html>
+===========================================================================================================================
 Slip14: Create a container add row inside it and add 3 columns inside row using BootStrap.
 <html>
 <head>
@@ -228,6 +223,7 @@ Slip14: Create a container add row inside it and add 3 columns inside row using 
 </div>
 </body>
 </html>
+==========================================================================================
 Slip15: Design a form to accept string from the user and perform the following operations
 
 a. To select first 5 words from the string
@@ -244,10 +240,7 @@ Enter a String<input type=text name=t1><br>
 <input type=radio name=op value=2>LowerCase<br>
 <input type=radio name=op value=3>Padding<br>
 <input type=radio name=op value=4>Remove Spaces<br>
-
-MOBILE: 9730381255 | WWW.NRCLASSESPUNE.COM | WWW.BCSBCA.COM
-
-<input type=radio name=op value=5>Reverse<br><br>
+<input type=radio name=op value=5>Reverse<br><br>
 <input type=submit value=submit>
 </form>
 </body>
@@ -285,10 +278,8 @@ $str=strrev($str);
 echo $str;
 }
 ?>
-
-MOBILE: 9730381255 | WWW.NRCLASSESPUNE.COM | WWW.BCSBCA.COM
-
-Slip16: Write a PHP script for the following: Design a form to accept the marks of 5
+===========================================================================================================
+Slip16: Write a PHP script for the following: Design a form to accept the marks of 5
 different subjects of a student, having serial number, subject name & marks out of 100.
 Display theresult in the tabular format which will have total, percentage and grade. Use only
 3 text boxes.(Use array of form parameters)
@@ -424,14 +415,10 @@ Slip19: Write a PHP script to accept 2 strings from the user, the first string s
 sentence andsecond can be a word.
 a. Delete a small part from first string after accepting position and number of
 characters toremove.
-
-MOBILE: 9730381255 | WWW.NRCLASSESPUNE.COM | WWW.BCSBCA.COM
-
-b. Insert the given small string in the given big string at specified position without
+b. Insert the given small string in the given big string at specified position without
 removingany characters from the big string.
 c. Replace some characters/ words from given big string with the given small string at
 specified position.
-
 HTML FILE
 <html>
 <form action=slip19.php method=get>
@@ -463,13 +450,9 @@ a) Split an array into chunks
 b) Sort the array by values without changing the keys.
 c) Filter the even elements from an array.
 
-HTML FILE
 <html>
 <body>
-
-MOBILE: 9730381255 | WWW.NRCLASSESPUNE.COM | WWW.BCSBCA.COM
-
-<form action="slip20.php" method="GET">
+<form action="slip20.php" method="GET">
 Enter Your Choice:<br>
 <input type="radio" name="ch" value=1> Split an array into chunks<br>
 <input type="radio" name="ch" value=2> Sort array by values without changing key
@@ -503,13 +486,12 @@ print_r($br);
 break;
 }
 ?>
+=================================================================================================================
 Slip21: Create an array of 15 high temperatures, approximating the weather for a spring
 month, then find the average high temp, the five warmest high temps Display the result on the
-browser
+browser?
 
-MOBILE: 9730381255 | WWW.NRCLASSESPUNE.COM | WWW.BCSBCA.COM
-
-<?php
+<?php
 $temp_array=range(31,45);
 $tot_temp = 0;
 $count = count($temp_array);
