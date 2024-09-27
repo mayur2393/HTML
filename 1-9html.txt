@@ -63,7 +63,7 @@ Solution:
 </body>
 </head>
 </html>
-
+-------------------------------------------------------------
 Slip 3:
 Write a program using html with following CSS specificationsi.
 1,The background colour of the company name should be in green.
@@ -91,7 +91,7 @@ growth
 through high-profile acquisitions like that of ad agency Droga5. With 721,000 people
 worldwide</p>
 </html>
-
+--------------------------------------------------------------------------------
 Slip4: Write a HTML code, which generate the following output
 Item No
 1 List of Books
@@ -137,12 +137,10 @@ MOBILE: 9730381255 | WWW.NRCLASSESPUNE.COM | WWW.BCSBCA.COM
 </tr>
 </body>
 </html>
+-----------------------------------------------------------------
 Slip5: Create following Bootstrap Web Layout Design and change Title, add your
 personal information, educational information, job profile.
-
-MOBILE: 9730381255 | WWW.NRCLASSESPUNE.COM | WWW.BCSBCA.COM
-
-<html lang="en">
+<html lang="en">
 <head>
 <title>NR Class</title>
 <link rel="stylesheet" href="bootstrap.min.css">
@@ -168,12 +166,12 @@ MOBILE: 9730381255 | WWW.NRCLASSESPUNE.COM | WWW.BCSBCA.COM
 </div>
 </body>
 </html>
+-------------------------------------------------------------
 Slip 6: Create following Bootstrap Web Layout Design and set Header background color
 Blue,add your College name, set Menu section background color green create menu About
 Us, In content section add college information, background color yellow, Footer section
 backgroundcolor red, add address of college.
-
-<html>
+<html>
 <head>
 <link rel="stylesheet" href="bootstrap.min.css">
 <title>NRC</title>
@@ -224,13 +222,13 @@ MOBILE: 9730381255 | WWW.NRCLASSESPUNE.COM | WWW.BCSBCA.COM
 </ul>
 </body>
 </html>
+----------------------------------------------------------------------
 Slip8: Design an HTML form to accept two strings from the user. Write a PHP script for
 thefollowing.
 a. Find whether the small string appears at the start of the large string.
 b. Find the position of the small string in the big string.
 c. Compare both the string for first n characters, also the comparison should not be case
 sensitive.
-
 HTML FILE
 <html>
 <body>
@@ -269,6 +267,7 @@ echo "first string bigger<br>";
 else
 echo "second string is bigger<br>";
 ?>
+-------------------------------------------------------------------------------------------------------------------------
 Slip9: Write a PHP script for the following: Design a form having a text box and a drop
 down listcontaining any 3 separators(e.g. #, |, %, @, ! or comma) accept a strings from the
 user and also aseparator.
@@ -299,10 +298,7 @@ PHP FILE
 $str=$_GET['str1'];
 $sep=$_GET['sep'];
 $op=$_GET['op'];
-
-MOBILE: 9730381255 | WWW.NRCLASSESPUNE.COM | WWW.BCSBCA.COM
-
-//echo "$str $sep $op";
+//echo "$str $sep $op";
 switch($op)
 {
 case 'a':$m=explode($sep,$str);
