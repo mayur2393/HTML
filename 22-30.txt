@@ -1,0 +1,319 @@
+Slip22: Write a menu driven program to perform the following queue related operations
+a) Insert an element in queue
+b) Delete an element from queue
+c) Display the contents of queue
+
+HTMl FILE
+<html>
+<body>
+<form method=get action="slip 23.php">
+<input type=radio name=ch value=1> Insert in queue<br>
+Enter No to insert<input type=text name=n1><br>
+<input type=radio name=ch value=2> Delete in queue<br>
+<input type=radio name=ch value=3> Display<br>
+<input type=submit>
+</form>
+</body>
+</html>
+PHP FILE
+
+MOBILE: 9730381255 | WWW.NRCLASSESPUNE.COM | WWW.BCSBCA.COM
+
+<?php
+$stk=array(1,2,3,4,5);
+$ch=$_GET['ch'];
+else if($ch==1)
+{
+echo "Insert element in queue <br>";
+$n4=$_GET['n4'];
+array_push($stk,$n4);//Insert element at last
+print_r($stk);
+}
+else if($ch==2)
+{
+echo "Delete element from queue. <br>";
+$res=array_shift($stk); //at begining
+echo "Deleted element is:".$res;
+}
+else if($ch ==3)
+{
+echo"Given array is: <br>";
+print_r($stk);
+}
+?>
+Slip23: Write a menu driven program to perform the following stack related operations:
+a) Insert an element in stack
+b) Delete an element from stack
+c) Display the contents of stack
+
+HTML FILE
+<html>
+<body>
+<form method=get action="slip23.php">
+<input type=radio name=ch value=1> Insert in stack<br>
+Enter No to insert<input type=text name=n1><br>
+<input type=radio name=ch value=2> Delete in stack<br>
+<input type=radio name=ch value=3> Display<br>
+<input type=submit>
+</form>
+</body>
+</html>
+PHP FILE
+<?php
+$stk=array(1,2,3,4,5);
+$ch=$_GET['ch'];
+if($ch==1)
+{
+
+MOBILE: 9730381255 | WWW.NRCLASSESPUNE.COM | WWW.BCSBCA.COM
+
+echo "Insert element in stack <br>";
+$n1=$_GET['n1'];
+array_push($stk,$n1); //at end
+print_r($stk);
+}
+else if($ch==2)
+{
+echo "Delete element in stack <br>";
+array_pop($stk);
+print_r($stk);
+}
+else if($ch == 3)
+{
+echo"Given array is: <br>";
+print_r($stk);
+}
+?>
+Slip24: Write a PHP program to read two file names from user and append content of first
+file intosecond file.
+HTML FILE
+
+<html lang="en">
+<head>
+<title>NRC File Handling</title>
+</head>
+<body>
+<form action="slip24.php" method="get">
+Enter File name to read <input type="text" name="fname1">
+Enter File name to write <input type="text" name="fname2">
+<input type="submit" value="Copy">
+</form>
+</body>
+</html>
+PHP FILE (create 2 text file pf your choice name and use same)
+<?php
+$fname1=$_GET['fname1'];
+$fname2=$_GET['fname2'];
+$fp1=fopen($fname1,"r");
+$fp2=fopen($fname2,"a");
+$size=filesize($fname1);
+$str=fread($fp1,$size);
+
+MOBILE: 9730381255 | WWW.NRCLASSESPUNE.COM | WWW.BCSBCA.COM
+
+fwrite($fp2,$str,$size);
+echo "Append Successfull";
+?>
+Slip25: Write a menu driven program to perform various file operations. Accept
+filename from user.
+a) Display type of file.
+b) Display last modification time of file
+c) Display the size of file
+d) Delete the file
+HTML FILE
+<html lang="en">
+<head>
+<title>Document</title>
+</head>
+<body>
+<form action="slip25.php" method="get">
+Enter File name to read <input type="text" name="fname1"><br>
+<input type="radio" name="op" value="1">Display Type of File<br>
+<input type="radio" name="op" value="2">Display Modification Time<br>
+<input type="radio" name="op" value="3">Display File Size<br>
+<input type="radio" name="op" value="4">Delete File<br>
+<input type="submit" value="Copy">
+</form>
+</body>
+</html>
+PHP FILE
+<?php
+$fp=$_GET['fname1'];
+$op=$_GET['op'];
+switch($op)
+{
+case 1:
+echo basename($fp);
+break;
+case 2: $mtime=stat($fp);
+echo Date("d/M/Y h:m:s",$mtime['mtime']);
+break;
+case 3:echo filesize($fp);
+break;
+case 4:unlink($fp);
+echo "File deleted";
+break;
+}
+
+MOBILE: 9730381255 | WWW.NRCLASSESPUNE.COM | WWW.BCSBCA.COM
+
+?>
+Slip 26: Consider the following entities and their relationship.
+Doctor ( doc_no, dname, address ,city ,area)
+Hospital (hosp_no, hname, hcity)
+Doctor-Hospital related with many-one
+relationship. Create a RDB in 3NF for above and
+solve the following.
+Using above database write a script in PHP to print the Doctor visiting to the Hospital in
+tabularformat. Accept Hospital name from user.
+(Use your database)
+Solution
+Html file
+<html>
+<form action=slip26.php method=get>
+Enter Hospital Name<input type=text name=t1><br>
+<input type=submit value="Display Doctors">
+</form>
+</html>
+PHP File
+<?php
+$con=pg_connect("host=localhost user=postgres password=nrc dbname=slip26");
+$cn=$_GET['t1'];
+$rs=pg_query($con,"select * from doctor,hospital where hname='$cn' and hsno=hno");
+while($row=pg_fetch_array($rs))
+{
+echo "Id:$row[0]
+Name:$row[1]
+Pin:$row[4]<br>";
+}
+?>
+
+Address:$row[2]
+
+City:$row[3]
+
+Slip27: Write a PHP program to read two file names from user and copy the content of first
+file into second file.
+HTML FILE
+<html lang="en">
+<head>
+<title>NRC File Handling</title>
+
+MOBILE: 9730381255 | WWW.NRCLASSESPUNE.COM | WWW.BCSBCA.COM
+
+</head>
+<body>
+<form action="slip27.php" method="get">
+Enter File name to read <input type="text" name="fname1">
+Enter File name to write <input type="text" name="fname2">
+<input type="submit" value="Copy">
+</form>
+</body>
+</html>
+PHP FILE
+<?php
+$fname1=$_GET['fname1'];
+$fname2=$_GET['fname2'];
+$fp1=fopen($fname1,"r");
+$fp2=fopen($fname2,"w");
+$size=filesize($fname1);
+$str=fread($fp1,$size);
+fwrite($fp2,$str,$size);
+echo "Append Successfull";
+?>
+
+Slip28: Write a program to read a flat file “student.dat”, calculate the percentage and
+display the data from file in tabular format.(Student.dat file contains rollno, name, OS, WT,
+DS, Python, Java, CN )
+Student.dat file
+rollno name OS WT DS Python Java CN
+1
+
+Abd 30 30 25 23
+
+20 45
+
+2
+
+xyz 32 33 24 25
+
+25 45
+
+PHP FILE
+<?php
+$fp=fopen("student.dat","r");
+$ar=fscanf($fp,"%s%s%s%s%s%s%s%s",$rl,$nm,$os,$wt,$ds,$py,$jv,$cn);
+
+MOBILE: 9730381255 | WWW.NRCLASSESPUNE.COM | WWW.BCSBCA.COM
+
+echo "<table
+border=1><tr><th>$rl</th><th>$nm</th><th>$os</th><th>$wt</th><th>$ds</th><t
+h>$py</th><th>$jv</th><th>$cn</th><th>Percentage</tr>";
+
+while(($ar=fscanf($fp,"%s%s%d%d%d%d%d%d",$rl,$nm,$os,$wt,$ds,$py,$jv,$cn))!=f
+alse)
+{
+$total=$os+$wt+$ds+$py+$jv+$cn;
+$per=$total/6;
+echo
+"<tr><th>$rl</th><th>$nm</th><th>$os</th><th>$wt</th><th>$ds</th><th>$py</t
+h><th>$jv</th><th>$cn</th><td>$per</td></tr>";
+}
+echo "</table>";
+?>
+
+Slip29:
+Consider the following entities and their relationships
+Event (eno , title , date )
+Committee ( cno , name, head , from_time ,to_time , status)
+Event and Committee have many to many relationship. Write a php script to accept title of
+eventand modify status committee as working
+
+HTML File
+<html>
+<form action=slip29.php method=get>
+Enter Event Name:<input type=text name=t1><br>
+<input type=submit value="Change Status">
+</form>
+</html>
+PHP File
+<?php
+$con=pg_connect("host=localhost user=postgres password=nrc bname=practicals22");
+//echo $con;
+$en=$_GET['t1'];
+$ws='Working';
+$x=pg_query($con,"update comm_mem set cstatus='$ws' from event_comm,event
+where comm_mem.cno=event_comm.cno and event_comm.eno=event.eno and
+etitle='$en'");
+if($x>0)
+echo "Working status updated";
+else
+echo "Status not updated";
+?>
+
+Slip30:
+Consider the following entities and their relationships
+Student (Stud_id,name,class)
+Competition (c_no,c_name,type)
+Relationship between student and competition is many-many with attribute rank and year.
+Createa RDB in 3NF for the above and solve the following. Using above database write a
+script in PHPto accept a competition name from user and display information of student
+who has secured 1st rank in that competition.
+HTML File
+<html>
+<form action=slip30.php method=get>
+Enter Comp. Name<input type=text name=t1><br>
+<input type=submit value="Display Ranker">
+</form>
+</html>
+PHP File
+<?php
+$con=pg_connect("host=localhost user=postgres password=nrc dbname=slip30");
+$cn=$_GET['t1'];
+$rs=pg_query($con,"select * from student,competition,stud_comp where cname='$cn'
+and srank=1 and id=sid and competition.cno=stud_comp.cno");
+while($row=pg_fetch_array($rs))
+{
+echo "$row[0] $row[1] $row[2]<br>";
+}
+?>
